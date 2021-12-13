@@ -77,4 +77,16 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="listInteger" lowerBound="1"
         upperBound="-1" eType="#//JsonInteger"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Div" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listInteger" lowerBound="1"
+        upperBound="-1" eType="#//JsonInteger"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mult" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listInteger" lowerBound="1"
+        upperBound="-1" eType="#//JsonInteger"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sub" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listInterger" lowerBound="1"
+        upperBound="-1" eType="#//JsonInteger"/>
+  </eClassifiers>
 </ecore:EPackage>

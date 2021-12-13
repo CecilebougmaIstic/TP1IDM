@@ -78,5 +78,14 @@
     <genClasses ecoreClass="tP1IDM.ecore#//Sum">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Sum/listInteger"/>
     </genClasses>
+    <genClasses ecoreClass="tP1IDM.ecore#//Div">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Div/listInteger"/>
+    </genClasses>
+    <genClasses ecoreClass="tP1IDM.ecore#//Mult">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Mult/listInteger"/>
+    </genClasses>
+    <genClasses ecoreClass="tP1IDM.ecore#//Sub">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Sub/listInterger"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
