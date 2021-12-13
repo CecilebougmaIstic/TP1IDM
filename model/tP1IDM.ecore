@@ -19,15 +19,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JsonArray" eSuperTypes="#//JSonAttribut">
+  <eClassifiers xsi:type="ecore:EClass" name="JsonArray" eSuperTypes="#//ComplexAttribut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Contient" lowerBound="1"
         upperBound="-1" eType="#//JSonAttribut"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="" instanceTypeName="newDataType1"/>
-  <eClassifiers xsi:type="ecore:EClass" name="JsonInteger" eSuperTypes="#//JSonAttribut">
+  <eClassifiers xsi:type="ecore:EClass" name="JsonInteger" eSuperTypes="#//SimpleAttribut">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JsonBoolean" eSuperTypes="#//JSonAttribut">
+  <eClassifiers xsi:type="ecore:EClass" name="JsonBoolean" eSuperTypes="#//SimpleAttribut">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSonObject"/>
@@ -50,16 +50,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="JSonAttribut" eSuperTypes="#//JSonObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JSonEnum" eSuperTypes="#//JSonAttribut">
+  <eClassifiers xsi:type="ecore:EClass" name="JSonEnum" eSuperTypes="#//ComplexAttribut">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Contient" lowerBound="1"
         upperBound="-1" eType="#//JSonAttribut"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JSonString" eSuperTypes="#//JSonAttribut">
+  <eClassifiers xsi:type="ecore:EClass" name="JSonString" eSuperTypes="#//SimpleAttribut">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JSonNull" eSuperTypes="#//JSonAttribut">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JSonNull" eSuperTypes="#//SimpleAttribut"/>
   <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//JSonObject"/>
@@ -71,5 +69,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="2" upperBound="2"
         eType="#//JSonObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation" eSuperTypes="#//JSonAttribut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexAttribut" eSuperTypes="#//JSonAttribut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleAttribut" eSuperTypes="#//JSonAttribut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sum" eSuperTypes="#//Operation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listInteger" lowerBound="1"
+        upperBound="-1" eType="#//JsonInteger"/>
   </eClassifiers>
 </ecore:EPackage>

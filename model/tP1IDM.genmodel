@@ -60,9 +60,7 @@
     <genClasses ecoreClass="tP1IDM.ecore#//JSonString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonString/value"/>
     </genClasses>
-    <genClasses ecoreClass="tP1IDM.ecore#//JSonNull">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonNull/value"/>
-    </genClasses>
+    <genClasses ecoreClass="tP1IDM.ecore#//JSonNull"/>
     <genClasses ecoreClass="tP1IDM.ecore#//Insert">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Insert/value"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Insert/node"/>
@@ -73,6 +71,12 @@
     <genClasses ecoreClass="tP1IDM.ecore#//Modify">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Modify/value"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Modify/node"/>
+    </genClasses>
+    <genClasses ecoreClass="tP1IDM.ecore#//Operation"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//ComplexAttribut"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//SimpleAttribut"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//Sum">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Sum/listInteger"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
