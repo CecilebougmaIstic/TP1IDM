@@ -10,12 +10,9 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="TP1IDM" disposableProviderFactory="true" ecorePackage="tP1IDM.ecore#/">
     <genDataTypes ecoreDataType="tP1IDM.ecore#//"/>
-    <genDataTypes ecoreDataType="tP1IDM.ecore#//simplenode"/>
-    <genDataTypes ecoreDataType="tP1IDM.ecore#//listnode"/>
-    <genDataTypes ecoreDataType="tP1IDM.ecore#//nulltype"/>
     <genDataTypes ecoreDataType="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-    <genClasses ecoreClass="tP1IDM.ecore#//COntient">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//COntient/jsonfile"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//Commandes">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Commandes/jsonfile"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonFile">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonFile/name"/>
@@ -40,22 +37,19 @@
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonObject"/>
     <genClasses ecoreClass="tP1IDM.ecore#//Display">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Display/jsonobject"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Display/node"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Display/node"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Subset">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Subset/nodes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Subset/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Subset/listNodes"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Select">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Select/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Select/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Select/jsonobject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Select/node"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Projection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Projection/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Projection/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Projection/jsonobject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Projection/node"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonAttribut">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonAttribut/name"/>
@@ -71,17 +65,14 @@
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Insert">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Insert/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Insert/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Insert/jsonobject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Insert/node"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Remove">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Remove/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Remove/jsonobject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Remove/node"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Modify">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Modify/value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Modify/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Modify/jsonobject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Modify/node"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

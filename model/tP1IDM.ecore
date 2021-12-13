@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tP1IDM" nsURI="http://www.example.org/tP1IDM" nsPrefix="tP1IDM">
-  <eClassifiers xsi:type="ecore:EClass" name="COntient">
+  <eClassifiers xsi:type="ecore:EClass" name="Commandes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonfile" upperBound="-1"
         eType="#//JSonFile" eOpposite="#//JSonFile/jsoncommand"/>
   </eClassifiers>
@@ -9,14 +9,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Contient" lowerBound="1"
         upperBound="-1" eType="#//JSonObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jsoncommand" eType="#//COntient"
-        eOpposite="#//COntient/jsonfile"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jsoncommand" eType="#//Commandes"
+        eOpposite="#//Commandes/jsonfile"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="#//COntient">
+  <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//COntient">
+  <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JsonArray" eSuperTypes="#//JSonAttribut">
@@ -31,23 +31,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSonObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//COntient">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//Commandes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Subset" eSuperTypes="#//COntient">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodes" eType="#//listnode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Subset" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listNodes" lowerBound="1"
+        upperBound="-1" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//COntient">
+  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Projection" eSuperTypes="#//COntient">
+  <eClassifiers xsi:type="ecore:EClass" name="Projection" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//JSonObject"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSonAttribut" eSuperTypes="#//JSonObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -60,23 +58,18 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSonNull" eSuperTypes="#//JSonAttribut">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//nulltype"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Remove" eSuperTypes="#//COntient">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Modify" eSuperTypes="#//COntient">
+  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="simplenode" instanceClassName="JSonObject"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="listnode" instanceClassName="listnode"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="nulltype" instanceClassName="nulltype"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Remove" eSuperTypes="#//Commandes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//JSonObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Modify" eSuperTypes="#//Commandes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="2" upperBound="2"
+        eType="#//JSonObject"/>
+  </eClassifiers>
 </ecore:EPackage>
