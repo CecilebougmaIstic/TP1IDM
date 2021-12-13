@@ -10,6 +10,9 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="TP1IDM" disposableProviderFactory="true" ecorePackage="tP1IDM.ecore#/">
     <genDataTypes ecoreDataType="tP1IDM.ecore#//"/>
+    <genDataTypes ecoreDataType="tP1IDM.ecore#//simplenode"/>
+    <genDataTypes ecoreDataType="tP1IDM.ecore#//listnode"/>
+    <genDataTypes ecoreDataType="tP1IDM.ecore#//nulltype"/>
     <genDataTypes ecoreDataType="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <genClasses ecoreClass="tP1IDM.ecore#//COntient">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//COntient/jsonfile"/>
