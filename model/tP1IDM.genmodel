@@ -10,16 +10,14 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="TP1IDM" disposableProviderFactory="true" ecorePackage="tP1IDM.ecore#/">
     <genDataTypes ecoreDataType="tP1IDM.ecore#//"/>
-    <genDataTypes ecoreDataType="tP1IDM.ecore#//JSonOject"/>
-    <genDataTypes ecoreDataType="tP1IDM.ecore#//List%3CJSonObject%3E"/>
-    <genDataTypes ecoreDataType="tP1IDM.ecore#//Null"/>
     <genDataTypes ecoreDataType="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonCommand">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonCommand/jsonfile"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonFile">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonFile/jsonobject"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonFile/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonFile/Contient"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonFile/jsoncommand"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Display">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Display/node"/>
@@ -27,48 +25,35 @@
     <genClasses ecoreClass="tP1IDM.ecore#//Load">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Load/path"/>
     </genClasses>
-    <genClasses ecoreClass="tP1IDM.ecore#//JsonArray">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JsonArray/jsonattribut"/>
-    </genClasses>
+    <genClasses ecoreClass="tP1IDM.ecore#//JsonArray"/>
     <genClasses ecoreClass="tP1IDM.ecore#//JsonInteger">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JsonInteger/value"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JsonBoolean">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JsonBoolean/value"/>
     </genClasses>
-    <genClasses ecoreClass="tP1IDM.ecore#//JSonObject">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonObject/jsonattribut"/>
-    </genClasses>
+    <genClasses ecoreClass="tP1IDM.ecore#//JSonObject"/>
     <genClasses ecoreClass="tP1IDM.ecore#//Display.1">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Display.1/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Display.1/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Display.1/jsoncommand"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Display.1/jsonobject"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Subset">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Subset/nodes"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Subset/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Subset/jsoncommand"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Select">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Select/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Select/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Select/jsoncommand"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Select/jsonobject"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Projection">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Projection/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Projection/jsoncommand"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Projection/node"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Projection/jsonobject"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonAttribut">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonAttribut/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonAttribut/jsonenum"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonAttribut/jsoninteger"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonAttribut/jsonstring"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonAttribut/jsonboolean"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonAttribut/jsonnull"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonEnum"/>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonString">
@@ -80,18 +65,15 @@
     <genClasses ecoreClass="tP1IDM.ecore#//Insert">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Insert/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Insert/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Insert/jsoncommand"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Insert/jsonobject"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Remove">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Remove/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Remove/jsoncommand"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Remove/jsonobject"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Modify">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Modify/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Modify/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Modify/jsoncommand"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Modify/jsonobject"/>
     </genClasses>
   </genPackages>
