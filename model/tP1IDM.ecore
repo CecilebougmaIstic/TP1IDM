@@ -61,6 +61,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//JSonObject"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="complexattribut" lowerBound="1"
+        eType="#//ComplexAttribut"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Remove" eSuperTypes="#//Commandes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="node" lowerBound="1" eType="#//JSonObject"/>
