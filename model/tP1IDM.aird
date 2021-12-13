@@ -5,7 +5,7 @@
     <semanticResources>tP1IDM.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_eHG-cFjDEey9bJDu87WnlA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_eIxLUFjDEey9bJDu87WnlA" name="tP1IDM" repPath="#_eIKHUFjDEey9bJDu87WnlA" changeId="b836c430-e9ba-4636-9c7f-d1655925373a">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_eIxLUFjDEey9bJDu87WnlA" name="tP1IDM" repPath="#_eIKHUFjDEey9bJDu87WnlA" changeId="957cbb4e-b3b7-41a3-af69-425d0c2b22a2">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="tP1IDM.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -64,7 +64,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_yzf4hljEEey9bJDu87WnlA"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_yzf4gVjEEey9bJDu87WnlA" fontName="Ubuntu" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yzf4gljEEey9bJDu87WnlA" x="252" y="246" width="98" height="50"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yzf4gljEEey9bJDu87WnlA" x="235" y="246" width="98" height="50"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_JJ_ZYFjFEey9bJDu87WnlA" type="2003" element="_JJ5SwFjFEey9bJDu87WnlA">
           <children xmi:type="notation:Node" xmi:id="_JJ_ZY1jFEey9bJDu87WnlA" type="5007"/>
