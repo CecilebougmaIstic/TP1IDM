@@ -16,3 +16,10 @@ La partie commandes permet de faire de nombreuse modification sur le fichier :
 - L'affichage d'une partie du fichier Json
 - L'insertion, la suppression et la modification d'une partie du fichier
 - Ainsi que la recherche de nom d'attribut grace a Projection et Subset
+
+## Models et code compilé attendu
+
+Les models est le code associer sont disponnible sur notre drive a cette URL.
+
+https://docs.google.com/document/d/1XXZp-z86YkKLeTG4HkeLj0DfNNmAg6ElMREBCPi6kzM/edit#
+
