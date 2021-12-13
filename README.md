@@ -1,2 +1,0 @@
-# TP1IDM
-MetaMODEL-DSL for JSON
