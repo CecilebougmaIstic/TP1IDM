@@ -22,8 +22,9 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonFile/Contient"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonFile/jsoncommand"/>
     </genClasses>
-    <genClasses ecoreClass="tP1IDM.ecore#//Display">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Display/node"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//Store">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Store/path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Store/name"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Load">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Load/path"/>
@@ -38,10 +39,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JsonBoolean/value"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonObject"/>
-    <genClasses ecoreClass="tP1IDM.ecore#//Display.1">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Display.1/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Display.1/node"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Display.1/jsonobject"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//Display">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//Display/jsonobject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Display/node"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//Subset">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Subset/nodes"/>

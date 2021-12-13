@@ -12,8 +12,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsoncommand" eType="#//COntient"
         eOpposite="#//COntient/jsonfile"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//COntient">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Store" eSuperTypes="#//COntient">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -31,9 +32,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSonObject"/>
   <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//COntient">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="#//simplenode"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subset" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodes" eType="#//listnode"/>
