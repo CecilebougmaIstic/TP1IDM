@@ -11,8 +11,8 @@
   <genPackages prefix="TP1IDM" disposableProviderFactory="true" ecorePackage="tP1IDM.ecore#/">
     <genDataTypes ecoreDataType="tP1IDM.ecore#//"/>
     <genDataTypes ecoreDataType="http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
-    <genClasses ecoreClass="tP1IDM.ecore#//JSonCommand">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonCommand/jsonfile"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//COntient">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//COntient/jsonfile"/>
     </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonFile">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonFile/name"/>
@@ -25,7 +25,9 @@
     <genClasses ecoreClass="tP1IDM.ecore#//Load">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//Load/path"/>
     </genClasses>
-    <genClasses ecoreClass="tP1IDM.ecore#//JsonArray"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//JsonArray">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JsonArray/Contient"/>
+    </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JsonInteger">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JsonInteger/value"/>
     </genClasses>
@@ -55,7 +57,9 @@
     <genClasses ecoreClass="tP1IDM.ecore#//JSonAttribut">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonAttribut/name"/>
     </genClasses>
-    <genClasses ecoreClass="tP1IDM.ecore#//JSonEnum"/>
+    <genClasses ecoreClass="tP1IDM.ecore#//JSonEnum">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tP1IDM.ecore#//JSonEnum/Contient"/>
+    </genClasses>
     <genClasses ecoreClass="tP1IDM.ecore#//JSonString">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tP1IDM.ecore#//JSonString/value"/>
     </genClasses>

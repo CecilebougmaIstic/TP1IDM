@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tP1IDM" nsURI="http://www.example.org/tP1IDM" nsPrefix="tP1IDM">
-  <eClassifiers xsi:type="ecore:EClass" name="JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="COntient">
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonfile" upperBound="-1"
         eType="#//JSonFile" eOpposite="#//JSonFile/jsoncommand"/>
   </eClassifiers>
@@ -9,16 +9,19 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Contient" lowerBound="1"
         upperBound="-1" eType="#//JSonObject"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="jsoncommand" eType="#//JSonCommand"
-        eOpposite="#//JSonCommand/jsonfile"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jsoncommand" eType="#//COntient"
+        eOpposite="#//COntient/jsonfile"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Load" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JsonArray" eSuperTypes="#//JSonAttribut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JsonArray" eSuperTypes="#//JSonAttribut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Contient" lowerBound="1"
+        upperBound="-1" eType="#//JSonAttribut"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="" instanceTypeName="newDataType1"/>
   <eClassifiers xsi:type="ecore:EClass" name="JsonInteger" eSuperTypes="#//JSonAttribut">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
@@ -27,21 +30,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSonObject"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Display" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaClass"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Subset" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Subset" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodes"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Select" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Projection" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Projection" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
@@ -49,23 +52,26 @@
   <eClassifiers xsi:type="ecore:EClass" name="JSonAttribut" eSuperTypes="#//JSonObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="JSonEnum" eSuperTypes="#//JSonAttribut"/>
+  <eClassifiers xsi:type="ecore:EClass" name="JSonEnum" eSuperTypes="#//JSonAttribut">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Contient" lowerBound="1"
+        upperBound="-1" eType="#//JSonAttribut"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSonString" eSuperTypes="#//JSonAttribut">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="JSonNull" eSuperTypes="#//JSonAttribut">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Insert" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Remove" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Remove" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Modify" eSuperTypes="#//JSonCommand">
+  <eClassifiers xsi:type="ecore:EClass" name="Modify" eSuperTypes="#//COntient">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="node"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="jsonobject" eType="#//JSonObject"/>
